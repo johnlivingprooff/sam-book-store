@@ -50,6 +50,19 @@
     text-align: left;
 }
 
+.preview-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.preview-content p {
+    font-size: 1rem;
+}
+
+.preview-content p:hover {
+    color: rgb(0, 0, 0);
+}
+
 .btn {
     width: 30%;
     height: 2.5rem;

@@ -108,14 +108,14 @@ export default function Home() {
                         <div className="book" key={book.id} onClick={() => handleBuyNowClick(book)}>
                             <img src={book.img} alt={book.title} />
                             <h3>{book.title}</h3>
-                            <a onClick={() => handleBuyNowClick(book)}>Buy Now - ${book.price}</a>
+                            <p onClick={() => handleBuyNowClick(book)}>Buy Now - MWK{book.price}</p>
                             {visiblePreview === book && <Preview book={[book.id, book.title, book.img, book.price, book.preview]} />}
                         </div>
                     ))}
                 </div>
             </section>
             <section className="podcast" id='podcast'>
-                <h1>PODCAST RSS FEED HERE</h1>
+                <h1>PODCAST RSS FEED HERE</h1>  
             </section>
             <Footer />
         </div>

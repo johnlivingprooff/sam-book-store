@@ -185,15 +185,16 @@
         padding: 18px 0;
     }
 
-    .book a {
+    .book p {
         font-size: 0.8rem;
         font-family: 'Raleway', sans-serif;
         text-align: center;
         color: #7a7a7a;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
     }
 
-    .book a:hover {
+    .book p:hover {
         color: orange;
     }
 

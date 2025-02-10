@@ -22,7 +22,7 @@ export default function Preview({ book }) {
                         <p>
                             {book[4]}
                         </p>
-                        <p className="price">Price: ${book[3]}</p>
+                        <p className="price">Price: MWK{book[3]}</p>
                         <button className="btn" onClick={sendBookToPaymentComponent}>Buy Now</button>
                     </div>
                 </div>

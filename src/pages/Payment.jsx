@@ -59,40 +59,6 @@ export default function Payment() {
             console.error(err);
         }
 
-        // Method Two
-
-        // const [firstName, lastName] = formData.name.split(' ');
-
-        // const pay_config = {
-        //     public_key: process.env.REACT_APP_PAYCHANGU_PUBLIC_KEY,
-        //     tx_ref: pay_ref,
-        //     amount: book[3],
-        //     currency: 'MWK',
-        //     callback_url: `${process.env.REACT_APP_WEB_APP_URL}/success`,
-        //     return_url: `${process.env.REACT_APP_WEB_APP_URL}/success`,
-        //     customer: {
-        //     email: formData.email,
-        //     first_name: firstName,
-        //     last_name: lastName,
-        //     phone_number: formData.phone
-        //     },
-        //     customization: {
-        //     title: `Payment for ${book[1]}`,
-        //     description: 'This is a test payment'
-        //     }
-        // };
-
-        // try {
-        //     await PopupSDK.initialize(pay_config);
-        //     await PopupSDK.makePayment(pay_config);
-        // } catch (error) {
-        //     console.error('Payment failed:', error);
-        // }
-
-        // Verify payment
-        // VerificationSDK.setSecretKey(process.env.REACT_APP_PAYCHANGU_PRIVATE_KEY);
-        // const verify_response = VerificationSDK.verifyTransaction(pay_ref);
-        // console.log(verify_response);
     };
 
     const handleSuccess = async (e) => {
@@ -124,7 +90,7 @@ export default function Payment() {
         <section className="pay_cont">
             <img src={book[2]} alt={book[1]} />
             <div className="pay_f">
-                <h2>{book[1]}</h2>
+                <h2>{book[1]} - MWK{book[3]}</h2>
                 <p>Fill in Your Details and Click Buy now to purchase</p>
                 <form onSubmit={handleSubmit}>
                     <input
