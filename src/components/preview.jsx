@@ -1,7 +1,15 @@
 import React from 'react';
 import '../styles/preview.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Preview({ book }) {
+    const navigate = useNavigate();
+
+    function sendBookToPaymentComponent() {
+        // This function will send the book to the payment component
+        navigate('/payment', { state: { book } });
+    }
+
     return (
         <div className="pre">
             <div className="popup">
@@ -12,14 +20,10 @@ export default function Preview({ book }) {
                     <div className="preview-content">
                         <h2>{book[1]}</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                            fermentum, quam vel lacinia tincidunt, nunc mi sollicitudin
-                            ligula, id ultricies felis turpis nec sapien. Nullam nec
-                            fermentum urna. Nulla facilisi. Nullam nec fermentum urna.
-                            Nulla facilisi.
+                            {book[4]}
                         </p>
                         <p className="price">Price: ${book[3]}</p>
-                        <button className="btn">Buy Now</button>
+                        <button className="btn" onClick={sendBookToPaymentComponent}>Buy Now</button>
                     </div>
                 </div>
             </div>

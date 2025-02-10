@@ -4,6 +4,7 @@ import heroImg from '../assets/glasses.jpg';
 import icon from '../assets/icon.png';
 import { FaAngleDoubleDown } from "react-icons/fa";
 import Preview from '../components/preview';
+import Footer from '../components/footer';
 import book_one_img from '../assets/book-one.png';
 import book_two_img from '../assets/book-two.png';
 import book_three_img from '../assets/book-three.png';
@@ -15,31 +16,36 @@ const books = [
         id: 1,
         title: 'Things Every First Year Student Should know',
         img: book_one_img,
-        price: '20.00',
+        price: 20000.00,
+        preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ut voluptates necessitatibus tempora rerum ea!',
     },
     {
         id: 2,
         title: 'Spiritual Secrets for Academic turaround',
         img: book_two_img,
-        price: '20.00',
+        price: 20000.00,
+        preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ut voluptates necessitatibus tempora rerum ea!',
     },
     {
         id: 3,
         title: 'You Can Win',
         img: book_three_img,
-        price: '20.00',
+        price: 20000.00,
+        preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ut voluptates necessitatibus tempora rerum ea!',
     },
     {
         id: 4,
         title: 'Growing In Campus Ministry',
         img: book_four_img,
-        price: '20.00',
+        price: 20000.00,
+        preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ut voluptates necessitatibus tempora rerum ea!',
     },
     {
         id: 5,
         title: 'I Will Make It',
         img: book_five_img,
-        price: '20.00',
+        price: 20000.00,
+        preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ut voluptates necessitatibus tempora rerum ea!',
     },
 ];
 
@@ -103,7 +109,7 @@ export default function Home() {
                             <img src={book.img} alt={book.title} />
                             <h3>{book.title}</h3>
                             <a onClick={() => handleBuyNowClick(book)}>Buy Now - ${book.price}</a>
-                            {visiblePreview === book && <Preview book={[book.id, book.title, book.img, book.price]} />}
+                            {visiblePreview === book && <Preview book={[book.id, book.title, book.img, book.price, book.preview]} />}
                         </div>
                     ))}
                 </div>
@@ -111,9 +117,7 @@ export default function Home() {
             <section className="podcast" id='podcast'>
                 <h1>PODCAST RSS FEED HERE</h1>
             </section>
-            <footer>
-                <p>&copy; 2021 Campus Unlimited &nbsp;&nbsp;|&nbsp;&nbsp; Deigned by <a href="https://github.com/johnlivingprooff" target='_new'>81PIXELS</a></p>
-            </footer>
+            <Footer />
         </div>
     );
 }

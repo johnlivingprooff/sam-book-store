@@ -1,0 +1,93 @@
+/* mobile screen */
+@media screen and (max-width: 500px) {
+
+}
+  
+/* tablet screen */
+@media screen and (min-width: 501px) and (max-width: 768px) {
+
+}
+
+/* laptop screen */
+@media screen and (min-width: 769px) and (max-width: 1919px) {
+    .pay_cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+        gap: 5rem;
+    }
+
+    .pay_cont img {
+        height: 55%;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .pay_f {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 25%;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .pay_f h2 {
+        font-size: 2rem;
+        font-weight: 1000;
+        text-transform: uppercase;
+    }   
+
+    .pay_f form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .pay_f form input {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .pay_f form button {
+        background-color: #000;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 1000;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 15px;
+        border: solid black 1px;
+        transition: all 0.3s;
+    }
+
+    .pay_f form button:hover {
+        background-color: #fff;
+        color: orange;
+        border: solid orange 1px;
+    }
+
+    .pay_f p {
+        font-size: 1rem;
+        color: #7a7a7a;
+    }
+
+    .pay_f a {
+        font-size: 1rem;
+        color: orange;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .pay_f a:hover {
+        color: #7a7a7a;
+    }
+}
+
+/* desktop screen */
+@media screen and (min-width: 1920px) {
+
+}
